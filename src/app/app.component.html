@@ -1,4 +1,28 @@
-<button type="button" class="btn btn-link">Link</button>
-<fa-icon icon="coffee"></fa-icon>
+<nav class="nav-bar">
+  <a class="navbar-brand" href="#">
+    <fa-icon icon="coffee"></fa-icon>
+    {{ title }}</a>
+</nav>
 
-<span>{{ title }} app is running!</span>
+<div class="d-flex justify-content-center align-items-center container ">
+
+  <div class="row ">
+
+    <div>
+      <label for="exampleDataList" class="form-label h2">Trouve ton école</label>
+      <input class="form-control form-control-lg" list="datalistOptions" id="exampleDataList" placeholder="Tape pour chercher...">
+      <datalist id="datalistOptions">
+        <option value="San Francisco">
+        <option value="New York">
+        <option value="Seattle">
+        <option value="Los Angeles">
+        <option value="Chicago">
+      </datalist>
+    </div>
+
+
+  </div>
+
+</div>
+
+
