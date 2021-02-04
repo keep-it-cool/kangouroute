@@ -44,5 +44,7 @@ export class SchoolMapComponent implements AfterViewInit {
     });
 
     tiles.addTo(this.map);
+
+    L.control.scale().addTo(this.map);
   }
 }

@@ -34,7 +34,10 @@ export class SchoolMobilityService {
           className: 'myDivIcon'
         });
 
-        L.marker([c.latitude, c.longitude]).addTo(map);
+        L.marker([c.latitude, c.longitude], {
+          riseOnHover : true,
+          riseOffset : 250
+        }).addTo(map);
       }
     });
   }
