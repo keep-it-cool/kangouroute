@@ -1,0 +1,10 @@
+schema: >-
+  https://api-eu-central-1.graphcms.com/v2/ckknkbsnpcmfu01xo3k092xgw/master/schema
+documents: ''
+extensions:
+  codegen:
+    generates:
+      ./generated/generated.ts:
+        plugins:
+          - typescript
+          - typescript-apollo-angular
