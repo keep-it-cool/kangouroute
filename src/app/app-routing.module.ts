@@ -4,9 +4,8 @@ import { SchoolComponent } from './school/school.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  {path: 'home' , component: SchoolComponent},
-  { path: '**', redirectTo: '/home'}
+  { path: '', component: SchoolComponent, pathMatch: 'full' },
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({
