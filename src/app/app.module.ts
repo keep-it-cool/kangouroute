@@ -9,6 +9,7 @@ import { SchoolComponent } from './school/school.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SchoolMapComponent } from './school-map/school-map.component';
+import {SchoolMobilityService} from "./school-mobility.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { SchoolMapComponent } from './school-map/school-map.component';
     GraphQLModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SchoolMobilityService],
   bootstrap: [AppComponent]
 })
 
