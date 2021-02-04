@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faCoffee, faSchool } from '@fortawesome/free-solid-svg-icons';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SchoolComponent } from './school/school.component';
 import { GraphQLModule } from './graphql.module';
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     SchoolComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FontAwesomeModule,
     GraphQLModule,
