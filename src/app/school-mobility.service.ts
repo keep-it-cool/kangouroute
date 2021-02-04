@@ -27,6 +27,13 @@ export class SchoolMobilityService {
     })
       .subscribe((res: any) => {
       for (const c of res.data.docks) {
+
+        const fontAwesomeIcon = L.divIcon({
+          html: '<fa-icon icon="coffee"></fa-icon>',
+          iconSize: [20, 20],
+          className: 'myDivIcon'
+        });
+
         L.marker([c.latitude, c.longitude]).addTo(map);
       }
     });

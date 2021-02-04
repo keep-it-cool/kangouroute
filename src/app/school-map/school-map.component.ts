@@ -34,8 +34,8 @@ export class SchoolMapComponent implements AfterViewInit {
 
   private initMap(): void {
     this.map = L.map('map', {
-      center: [ 49.8970304, 5.0770596 ],
-      zoom: 15
+      center: [ 50.6342723, 5.5598581 ],
+      zoom: 13
     });
 
     const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
