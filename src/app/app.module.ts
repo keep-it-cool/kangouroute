@@ -5,10 +5,12 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { faCoffee, faSchool } from '@fortawesome/free-solid-svg-icons';
 
 import { AppComponent } from './app.component';
+import { SchoolComponent } from './school/school.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SchoolComponent
   ],
   imports: [
     BrowserModule,
