@@ -1,5 +1,7 @@
 # Kangouroute
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9317fc01-0dbc-4ea0-b0c3-a6fbd4717f5f/deploy-status)](https://app.netlify.com/sites/kangouroute/deploys)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
 ## Development server
