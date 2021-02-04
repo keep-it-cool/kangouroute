@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SchoolComponent implements OnInit {
 
+  title = 'kangouroute';
+
   constructor() { }
 
   ngOnInit(): void {
