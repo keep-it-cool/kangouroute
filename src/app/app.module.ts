@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { SchoolComponent } from './school/school.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SchoolMapComponent } from './school-map/school-map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SchoolComponent
+    SchoolComponent,
+    SchoolMapComponent
   ],
   imports: [
     BrowserModule,
