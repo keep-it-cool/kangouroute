@@ -9,8 +9,8 @@ Project started as a hackathon challenge to answer [the following problematic](h
 
 Key mobility players : schools (parents associations), the parents, the children and a mobility actor (Ville de Liège).
 
-[[Team collaboration public documents on Drive](https://drive.google.com/drive/folders/1RLHxjQB8d-YyAvs4MobJzx_s7NVuAcY6)]
-[Hackathon presentation slides](https://docs.google.com/presentation/d/19-ATqX60QvBE3BWiOGikLjgCoJOV12Y6tPqUy3OIhT4)
+* [Team collaboration public documents on Drive](https://drive.google.com/drive/folders/1RLHxjQB8d-YyAvs4MobJzx_s7NVuAcY6)
+* [Hackathon presentation slides](https://docs.google.com/presentation/d/19-ATqX60QvBE3BWiOGikLjgCoJOV12Y6tPqUy3OIhT4)
 
 # Architecture
 
