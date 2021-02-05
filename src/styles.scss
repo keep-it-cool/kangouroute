@@ -3,3 +3,4 @@ $primary: #ed6d26;
 $body-color: #ed6d26;
 // import in the bootstrap SASS file
 @import '../node_modules/bootstrap/scss/bootstrap';
+@import "~leaflet/dist/leaflet.css";
