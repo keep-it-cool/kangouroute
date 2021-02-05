@@ -30,7 +30,7 @@ The front is a [angular static site](https://github.com/angular/angular-cli) tha
 * https://www.odwb.be/explore/dataset/signaletique-fase : schools in Brussels-Wallonia (Belgium) -> we filtered it on 4000, 4020, 4030, 4031, 4032 postcodes for Liège
 * https://opendata.liege.be/explore/dataset/creches-communales : council child cares in Liège
 * https://opendata.liege.be/explore/dataset/shop-and-drive-real-time : real time shop and drive parking spots in Liège
-* https://opendata.liege.be/explore/dataset/parkings-voitures-hors-voirie : off-street car parking in Liège *not machine readable* (hack into the page `$('#geojson').data('geojson').features.map(e=> [e.id,e.properties.title,"Parking",e.geometry.coordinates[0],e.geometry.coordinates[1]].join(",")).join("\n")`)
+* https://opendata.liege.be/explore/dataset/parkings-voitures-hors-voirie : off-street car parking in Liège **not machine readable** (hack into the page `$('#geojson').data('geojson').features.map(e=> [e.id,e.properties.title,"Parking",e.geometry.coordinates[0],e.geometry.coordinates[1]].join(",")).join("\n")`)
 * https://www.transportdata.be/fr/dataset/tec-gtfs : GTFS for TEC buses [and trams -> not in Liège right now but soon] (Wallonia), not used so far (we might look for something more basic for our needs)
 * https://opendata.bruxelles.be/explore/dataset/gares-sncb : SNCB train stops (Belgium)
 * https://opendata.liege.be/explore/dataset/arceaux-velos : Bicycle hoops in Liège
