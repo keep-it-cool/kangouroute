@@ -65,7 +65,7 @@ The csv published concept sheets :
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+After installing all dependencies with `npm install`, run `ng serve` for a dev server (may take a few minutes). Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 * Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 * Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
@@ -78,18 +78,19 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Tools used
 
 * Github
-* Zoom (communicating from Oz)
+* [Fork](https://fork.dev/)
+* Zoom (communicating with Oz)
 * IntelliJ
 * Visual Studio Code
 * Angular
-* Postman (take the right one : app for windows) => pk ??
+* Postman
 * GraphCMS
 * Netlify
 
 ## Libraries
 
 * [Leafletjs package for angular](https://github.com/Asymmetrik/ngx-leaflet)
-* [Apollo-angular](https://github.com/howtographql/angular-apollo) [for sending graphQl requests from angular cli to graphCMS] bon url ???
+* [Apollo-angular](https://github.com/howtographql/angular-apollo) [for sending graphQl requests from angular-cli to graphCMS]
 * [Node GTFS explorer for TEC GTFS](https://github.com/BlinkTagInc/node-gtfs) [not used in the end]
 
 ## Tutorials
