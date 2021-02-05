@@ -15,7 +15,7 @@ export class SchoolMobilityService {
 
   }
 
-  makeCapitalMarkers(map: L.map): void {
+  makeCapitalMarkers(map: L.Map): void {
     this.apollo.query<any>({
       query: gql`
           query MyQuery {
@@ -36,10 +36,14 @@ export class SchoolMobilityService {
           className: 'myDivIcon'
         });
 
-        L.marker([c.latitude, c.longitude], {
+        const marker = L.marker([c.latitude, c.longitude], {
           riseOnHover : true,
           riseOffset : 250
-        }).addTo(map);
+        })
+
+        marker.bindPopup(c.type);
+
+        marker.addTo(map);
       }
     });
   }
