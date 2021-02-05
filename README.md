@@ -37,7 +37,7 @@ The front is a [angular static site](https://github.com/angular/angular-cli) tha
 
 ## DataViz (visualize, filter, aggregate and expose the data)
 
-The datasets are imported dynamically through into a google spreadsheet (`ImportData("the comma separated csv url")` function), look at the `_raw` sheets. Then the data is filtered and aggregated in concept sheets (format close to the GraphQL concepts). Those concept sheets are published as csv. Once you open the sheet, from the imports to the published sheets is refreshed
+The datasets are imported dynamically through into a google spreadsheet (`ImportData("the comma separated csv url")` function), look at the `_raw` sheets. Then the data is filtered and aggregated (the `Query` function is pretty cool) in concept sheets (format close to the GraphQL concepts). Those concept sheets are published as csv. Once you open the sheet, from the imports to the published sheets is refreshed
 
 [DataViz google spreadsheet](https://docs.google.com/spreadsheets/d/1KhuTfYY5wq05IC5y2-bctlo1juMgQ5wOqqDttV45sQA/) [A bit of work and cleaning left TODO]
 
