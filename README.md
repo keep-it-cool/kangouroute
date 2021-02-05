@@ -1,4 +1,4 @@
-# Kangouroute
+# Kangouroute [ALPHA]
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9317fc01-0dbc-4ea0-b0c3-a6fbd4717f5f/deploy-status)](https://app.netlify.com/sites/kangouroute/deploys)
 
@@ -6,6 +6,16 @@ Project started as a hackathon challenge to answer [the following problematic](h
 
 > Diminuez le trafic aux abords des écoles en développant une application recensant les alternatives à la voiture et les spots de stationnement
 > [*Ville de Liège*](https://www.liege.be/)
+
+## Architecture
+
+The architecture of the solution is inspired by the [JAM stack](https://jamstack.org/).
+
+The backend is supported by [GraphCMS](https://graphcms.com/docs), a headlessCMS. The platform hosts the data and expose it as [graphQL](https://graphql.org/) endpoint. Webhooks can be set up for content events (so you can integrate it with Zapier, Integromat ...).
+
+> The GraphQL endpoint : https://api-eu-central-1.graphcms.com/v2/ckknkbsnpcmfu01xo3k092xgw/master (try the playground ;))
+
+The front is a [angular static site](https://github.com/angular/angular-cli) that solely relies on data provided by the previous API. It is hosted on [netlify](https://www.netlify.com/). Check https://kangouroute.netlify.app/
 
 ## Open data
 
