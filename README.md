@@ -40,7 +40,7 @@ The front is a [angular static site](https://github.com/angular/angular-cli) tha
 
 ## DataViz (visualize, filter, aggregate and expose the data)
 
-The datasets are imported dynamically through into a google spreadsheet (`ImportData("the comma separated csv url")` function), look at the `_raw` sheets. Then the data is filtered and aggregated (the `Query` function is pretty cool) in concept sheets (format close to the GraphQL concepts). Those concept sheets are published as csv. Once you open the sheet, from the imports to the published sheets is refreshed
+The datasets are imported dynamically through into a google spreadsheet (`ImportData("the comma separated csv url")` function), look at the `_raw` sheets. Then the data is filtered and aggregated (the `Query` function is pretty cool) in concept sheets (format close to the GraphQL concepts). Those concept sheets are published as csv. Each time you open the sheet, the data import is refreshed.
 
 [DataViz google spreadsheet](https://docs.google.com/spreadsheets/d/1KhuTfYY5wq05IC5y2-bctlo1juMgQ5wOqqDttV45sQA/) [A bit of work and cleaning left TODO]
 
@@ -75,17 +75,21 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 # Toolbox
 
-## Tools
+## Tools used
 
 * Github
+* Zoom (communicating from Oz)
 * IntelliJ
-* Postman (take the right one : app for windows)
+* Visual Studio Code
+* Angular
+* Postman (take the right one : app for windows) => pk ??
 * GraphCMS
 * Netlify
 
 ## Libraries
 
 * [Leafletjs package for angular](https://github.com/Asymmetrik/ngx-leaflet)
+* [Apollo-angular](https://github.com/howtographql/angular-apollo) [for sending graphQl requests from angular cli to graphCMS] bon url ???
 * [Node GTFS explorer for TEC GTFS](https://github.com/BlinkTagInc/node-gtfs) [not used in the end]
 
 ## Tutorials
