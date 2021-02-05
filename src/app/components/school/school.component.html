@@ -10,13 +10,14 @@
 
     <div>
       <label for="exampleDataList" class="form-label h2">Trouve ton école</label>
-      <input class="form-control form-control-lg" list="datalistOptions" id="exampleDataList" placeholder="Tape pour chercher...">
+      <input
+        class="form-control form-control-lg"
+        list="datalistOptions"
+        id="exampleDataList"
+        placeholder="Tape pour chercher..."
+        (change)="search($event)">
       <datalist id="datalistOptions">
-        <option value="San Francisco">
-        <option value="New York">
-        <option value="Seattle">
-        <option value="Los Angeles">
-        <option value="Chicago">
+        <option *ngFor="let s of schools" [value]="s.name" >{{s.name}}</option>
       </datalist>
     </div>
 
@@ -25,4 +26,4 @@
 
 </div>
 
-<app-school-map></app-school-map>
+<app-school-map [zoomedSchool]="selectedSchool"></app-school-map>

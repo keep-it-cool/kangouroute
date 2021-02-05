@@ -1,5 +1,6 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import * as L from 'leaflet';
+import { School } from 'src/generated/graphql';
 import {SchoolMobilityService} from "../../services/school-mobility.service";
 
 const iconRetinaUrl = 'assets/marker-icon-2x.png';
@@ -22,14 +23,26 @@ L.Marker.prototype.options.icon = iconDefault;
   templateUrl: './school-map.component.html',
   styleUrls: ['./school-map.component.scss']
 })
-export class SchoolMapComponent implements AfterViewInit {
+export class SchoolMapComponent implements AfterViewInit, OnChanges {
   private map;
+  
+  @Input()
+  public zoomedSchool: School; 
 
   constructor(private schoolMobilityService : SchoolMobilityService ) { }
 
   ngAfterViewInit(): void {
     this.initMap();
     this.schoolMobilityService.makeCapitalMarkers(this.map)
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.zoomedSchool)
+    {
+      console.log(">changes: " + this.zoomedSchool.name);
+      var latlng = L.latLng(this.zoomedSchool.latitude, this.zoomedSchool.longitude);
+      this.map.setView(latlng, 18);
+    }
   }
 
   private initMap(): void {
