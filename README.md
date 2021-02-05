@@ -9,7 +9,7 @@ Project started as a hackathon challenge to answer [the following problematic](h
 
 # Architecture
 
-![Architecture picture](https://lh3.googleusercontent.com/zTrPnq7OwE4s37plvHXvjy2y6EXumhqgx1tpC7RZhSRs0jxr3oPaBobFxCFlfquBQUb2eI6fM-q_JssOJZzG3KfCo0TbULqUvmUgS6rrJGuadn2IJZL-CcgRsel1tfRVZjZhVTkZu9M=w1920-h1080)
+[![Architecture picture](https://lh3.googleusercontent.com/zTrPnq7OwE4s37plvHXvjy2y6EXumhqgx1tpC7RZhSRs0jxr3oPaBobFxCFlfquBQUb2eI6fM-q_JssOJZzG3KfCo0TbULqUvmUgS6rrJGuadn2IJZL-CcgRsel1tfRVZjZhVTkZu9M=w600-h400)](https://photos.google.com/photo/AF1QipOffqiKwme0seBcEKHTLqtpzrOoriRS8mNDrnLl)
 
 The architecture of the solution is inspired by the [JAM stack](https://jamstack.org/).
 
@@ -17,7 +17,7 @@ The backend is supported by [GraphCMS](https://graphcms.com/docs), a headlessCMS
 
 > The GraphQL endpoint : https://api-eu-central-1.graphcms.com/v2/ckknkbsnpcmfu01xo3k092xgw/master (try the playground ;))
 
-The front is a [angular static site](https://github.com/angular/angular-cli) that solely relies on data provided by the previous API. It is hosted on [netlify](https://www.netlify.com/). Check https://kangouroute.netlify.app/
+The front is a [angular static site](https://github.com/angular/angular-cli) that solely relies on data provided by the previous API. It is hosted on [netlify](https://www.netlify.com/). Bootstrap, FontAwesome and LeafletJS are used. Check https://kangouroute.netlify.app/
 
 # Open data
 
