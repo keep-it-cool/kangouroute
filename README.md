@@ -9,6 +9,8 @@ Project started as a hackathon challenge to answer [the following problematic](h
 
 # Architecture
 
+![Architecture picture](https://lh3.googleusercontent.com/zTrPnq7OwE4s37plvHXvjy2y6EXumhqgx1tpC7RZhSRs0jxr3oPaBobFxCFlfquBQUb2eI6fM-q_JssOJZzG3KfCo0TbULqUvmUgS6rrJGuadn2IJZL-CcgRsel1tfRVZjZhVTkZu9M=w1920-h1080)
+
 The architecture of the solution is inspired by the [JAM stack](https://jamstack.org/).
 
 The backend is supported by [GraphCMS](https://graphcms.com/docs), a headlessCMS. The platform hosts the data and expose it as [graphQL](https://graphql.org/) endpoint. Webhooks can be set up for content events (so you can integrate it with Zapier, Integromat ...).
