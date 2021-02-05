@@ -25,9 +25,10 @@ L.Marker.prototype.options.icon = iconDefault;
 })
 export class SchoolMapComponent implements AfterViewInit, OnChanges {
   private map;
-  
+  private localCircle;
+
   @Input()
-  public zoomedSchool: School; 
+  public zoomedSchool: School;
 
   constructor(private schoolMobilityService : SchoolMobilityService ) { }
 
@@ -41,7 +42,20 @@ export class SchoolMapComponent implements AfterViewInit, OnChanges {
     {
       console.log(">changes: " + this.zoomedSchool.name);
       var latlng = L.latLng(this.zoomedSchool.latitude, this.zoomedSchool.longitude);
-      this.map.setView(latlng, 18);
+
+      if(this.localCircle){
+        this.map.removeLayer(this.localCircle);
+      }
+
+      this.localCircle = L.circle([this.zoomedSchool.latitude, this.zoomedSchool.longitude],
+        {
+        color:'red',
+          fillColor: '#f03',
+          fillOpacity: 0.2,
+        radius:100
+      }).addTo(this.map);
+
+      this.map.setView(latlng, 16);
     }
   }
 
