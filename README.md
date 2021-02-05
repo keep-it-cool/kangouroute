@@ -27,7 +27,8 @@ The front is a [angular static site](https://github.com/angular/angular-cli) tha
 
 ## Datasets
 
-* https://www.odwb.be/explore/dataset/signaletique-fase : schools in Brussels-Wallonia (Belgium) -> we filtered it on 4000, 4020, 4030, 4031, 4032 postcodes for Liège
+* https://www.odwb.be/explore/dataset/signaletique-fase : schools in Brussels-Wallonia (Belgium)
+  * we filtered it on 4000, 4020, 4030, 4031, 4032 postcodes for Liège
 * https://opendata.liege.be/explore/dataset/creches-communales : council child cares in Liège
 * https://opendata.liege.be/explore/dataset/shop-and-drive-real-time : real time shop and drive parking spots in Liège
 * https://opendata.liege.be/explore/dataset/parkings-voitures-hors-voirie : off-street car parking in Liège **not machine readable** 
