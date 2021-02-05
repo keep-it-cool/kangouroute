@@ -6,11 +6,11 @@ import { faCoffee, faSchool } from '@fortawesome/free-solid-svg-icons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SchoolComponent } from './school/school.component';
+import { SchoolComponent } from './components/school/school.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
-import { SchoolMapComponent } from './school-map/school-map.component';
-import {SchoolMobilityService} from "./school-mobility.service";
+import { SchoolMapComponent } from './components/school-map/school-map.component';
+import {SchoolMobilityService} from "./services/school-mobility.service";
 
 @NgModule({
   declarations: [
