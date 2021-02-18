@@ -4,7 +4,7 @@ import { Apollo } from "apollo-angular";
 import { Observable } from 'rxjs';
 import gql from "graphql-tag";
 import * as L from 'leaflet';
-import { School } from 'src/generated/graphql';
+import { DockType, School } from 'src/generated/graphql';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class SchoolMobilityService {
     this.apollo.query<any>({
       query: gql`
           query MyQuery {
-            docks {
+            docks(first:1000) {
               latitude
               longitude
               name
