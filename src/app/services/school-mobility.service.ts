@@ -16,10 +16,20 @@ export class SchoolMobilityService {
   }
 
   makeCapitalMarkers(map: L.Map): void {
+
+    var greenIcon = new L.Icon({
+      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+      shadowSize: [41, 41]
+    });
+
     this.apollo.query<any>({
       query: gql`
           query MyQuery {
-            docks(first:1000) {
+            docks(first:10000) {
               latitude
               longitude
               name
@@ -30,16 +40,21 @@ export class SchoolMobilityService {
     }).subscribe((res: any) => {
       for (const c of res.data.docks) {
 
-        const fontAwesomeIcon = L.divIcon({
-          html: '<fa-icon icon="coffee"></fa-icon>',
-          iconSize: [20, 20],
-          className: 'myDivIcon'
-        });
+       let marker;
 
-        const marker = L.marker([c.latitude, c.longitude], {
-          riseOnHover : true,
-          riseOffset : 250
-        })
+        if(c.type == DockType.BicycleHoop){
+          marker = L.marker([c.latitude, c.longitude], {
+            riseOnHover : true,
+            riseOffset : 250,
+            icon : greenIcon
+          })
+        }else{
+          marker = L.marker([c.latitude, c.longitude], {
+            riseOnHover : true,
+            riseOffset : 250
+          })
+        }
+        
 
         marker.bindPopup(c.type);
 
