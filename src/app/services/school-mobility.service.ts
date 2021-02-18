@@ -47,26 +47,4 @@ export class SchoolMobilityService {
       }
     });
   }
-
-  // findSchools(name_subst: String): Observable<ApolloQueryResult<School[]>> {
-  //                                                              |-> une interface enveloppe "schools"
-  findSchools(name_subst: String): Observable<ApolloQueryResult<any>> {
-    return this.apollo.query<School[]>({
-      query: gql`
-          query doFindSchools($name_subst: String) {
-            schools(where: {name_contains: $name_subst}) {
-              id
-              name
-              latitude
-              longitude
-            }
-          }
-        `,
-        variables: {
-          name_subst: name_subst
-        }
-    });
-  }
-
-
 }

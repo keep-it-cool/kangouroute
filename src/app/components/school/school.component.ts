@@ -1,52 +1,60 @@
-import { Component, OnInit } from '@angular/core';
+import { ReturnStatement } from '@angular/compiler';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SchoolMobilityService } from 'src/app/services/school-mobility.service';
 import { School } from 'src/generated/graphql';
+
+import { Subscription } from 'rxjs';
+import { Apollo, gql } from 'apollo-angular';
 
 @Component({
   selector: 'app-school',
   templateUrl: './school.component.html',
   styleUrls: ['./school.component.css']
 })
-export class SchoolComponent implements OnInit {
+export class SchoolComponent implements OnInit, OnDestroy {
 
   title = 'kangouroute';
-  public schools: School[];
-  public selectedSchool: School;
+  schools : School[];
+  selectedSchool: School;
 
-  constructor(private schoolMobilityService : SchoolMobilityService) { }
+  private querySubscription: Subscription;
 
-  ngOnInit(): void {
+  constructor(private apollo: Apollo, private service: SchoolMobilityService) { 
   }
 
-  reloadSchools(nameSubstr: String): void {
-    this.schoolMobilityService.findSchools(nameSubstr).subscribe(schoolDataObj => {
-      this.schools = schoolDataObj.data.schools;
-      console.log("new schools list : " + JSON.stringify(this.schools));
-      this.selectSchool();
-    }, err => {
-      console.log("err> " + JSON.stringify(err))
-    }, () => {
-      console.log("done");
-    });
+  ngOnInit() {
+    this.querySubscription = this.apollo.watchQuery<any>({
+      query: gql`
+      query getSchools{
+        schools(first: 500){
+          id
+          name
+          latitude
+          longitude
+        }
+      }
+    `
+    })
+      .valueChanges
+      .subscribe(({ data }) => {
+        let s = data.schools;
+
+        this.schools= s.filter((thing, index, self) =>
+          index === self.findIndex((t) => (
+            t.name === thing.name
+          ))
+)
+      });
   }
 
-  public search(e: any): void {
-    let name = e.target.value;
-    console.log("searchin : " + name);
-    this.reloadSchools(name);
+  ngOnDestroy() {
+    this.querySubscription.unsubscribe();
   }
 
-  public selectSchool(): void {
-    if (this.schools.length === 1)
-    {
-      this.selectedSchool = this.schools[0]
-      console.log("selected" + JSON.stringify(this.selectedSchool));
-    }
-    else
-    {
-      this.selectedSchool = null;
-      console.log("did not made selection");
-    }
+
+  public selectSchool(event): void {
+    console.log(event);
+    this.selectedSchool = this.schools.find(s => s.name == event.target.value);
   }
 
 }
