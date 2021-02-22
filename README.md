@@ -14,7 +14,7 @@ Key mobility players : schools (parents associations), the parents, the children
 
 # Architecture
 
-[![Architecture picture](https://lh3.googleusercontent.com/zTrPnq7OwE4s37plvHXvjy2y6EXumhqgx1tpC7RZhSRs0jxr3oPaBobFxCFlfquBQUb2eI6fM-q_JssOJZzG3KfCo0TbULqUvmUgS6rrJGuadn2IJZL-CcgRsel1tfRVZjZhVTkZu9M=w600-h400)](https://photos.google.com/photo/AF1QipOffqiKwme0seBcEKHTLqtpzrOoriRS8mNDrnLl)
+[![Architecture picture](https://lh3.googleusercontent.com/AVNVrzaAbkZJrDCRin5sT5G8nJc123NWuOPVJIriz51oqSpk_1IkZV_AIb8e8PxZO0a-YdAktUynioKsQ1rLmj0QdgUJjNLjv7uJhzM-8KWyAdYJkMptIUhCIJJ5UXOQpgqhfgWukUk=w600-h400)](https://photos.app.goo.gl/o156oM7WkVAo8sGC8)
 
 The architecture of the solution is inspired by the [JAM stack](https://jamstack.org/).
 
