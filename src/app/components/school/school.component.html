@@ -15,7 +15,7 @@
         list="datalistOptions"
         id="exampleDataList"
         placeholder="Tape pour chercher..."
-        (select)="selectSchool($event)">
+        (input)="selectSchool($event)">
       <datalist id="datalistOptions">
         <option *ngFor="let s of schools" [value]="s.name" [attr.data.value]="s.id"  >{{s.name}}</option>
       </datalist>
